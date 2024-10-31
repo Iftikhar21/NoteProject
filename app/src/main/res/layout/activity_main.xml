@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/noteHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/poppins"
+        android:text="Notes"
+        android:layout_marginStart="18dp"
+        android:textColor="@color/orange"
+        android:textSize="24sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/noteRecycle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/absen"
+        android:layout_alignStart="@+id/absen"
+        android:layout_marginStart="-19dp"
+        android:layout_marginTop="-1dp"
+        android:padding="16dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:clickable="true"
+        app:srcCompat="@drawable/baseline_add_24"
+        app:backgroundTint="@color/orange"
+        app:tint="@color/white"/>
+
+    <TextView
+        android:id="@+id/nama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/noteHeading"
+        android:layout_alignStart="@+id/noteHeading"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/poppins"
+        android:textSize="15sp"
+        android:text="Nama : Iftikhar Azhar Chaudhry" />
+
+    <TextView
+        android:id="@+id/kelas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nama"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/poppins"
+        android:layout_alignStart="@+id/nama"
+        android:textSize="15sp"
+        android:text="Kelas : XI RPL 2" />
+
+    <TextView
+        android:id="@+id/absen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/kelas"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/poppins"
+        android:layout_alignStart="@+id/kelas"
+        android:textSize="15sp"
+        android:text="No. Absen 13" />
+</RelativeLayout>
